@@ -17,7 +17,7 @@ fun LoadLeaflet(modifier: Modifier) {
                 settings.javaScriptEnabled = true
                 settings.domStorageEnabled = true
                 settings.allowFileAccess = true
-                loadUrl("file:///android_asset/leaflet/dist/index.html")
+                loadUrl("file:///android_asset/leaflet/index.html")
             }
         }
     )
