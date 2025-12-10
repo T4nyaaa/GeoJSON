@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             GeoJSONTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LoadLeaflet(
-                        modifier = Modifier.padding(innerPadding).fillMaxSize()
+                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }

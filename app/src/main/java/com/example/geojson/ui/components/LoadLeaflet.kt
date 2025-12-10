@@ -1,7 +1,8 @@
 package com.example.geojson.ui.components
 
+import android.util.Log
 import android.webkit.WebView
-import android.webkit.WebViewClient
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -15,7 +16,7 @@ fun LoadLeaflet(modifier: Modifier) {
             WebView(context).apply {
                 settings.javaScriptEnabled = true
                 settings.domStorageEnabled = true
-                webViewClient = WebViewClient()
+                settings.allowFileAccess = true
                 loadUrl("file:///android_asset/leaflet/dist/index.html")
             }
         }
@@ -25,5 +26,5 @@ fun LoadLeaflet(modifier: Modifier) {
 @Preview
 @Composable
 fun LoadLeafletPreview() {
-    LoadLeaflet(modifier = Modifier)
+    LoadLeaflet(modifier = Modifier.fillMaxSize())
 }
